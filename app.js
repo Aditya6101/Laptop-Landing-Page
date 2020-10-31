@@ -13,14 +13,14 @@ const dot1 = document.querySelector(".dot-1");
 const dot2 = document.querySelector(".dot-2");
 const dot3 = document.querySelector(".dot-3");
 const leftArrow = document.querySelector(".left-arrow");
-const rightArrow = document.querySelector(".right-arrow");
-const eclipseImages = document.querySelectorAll("stop");
 
 // ? Creating array of dots and array of colors
-// * Converting nodeList to an array
-const dotArr = [...dots];
 
 const colors = ["#c36cbb", "#0f5c5f", "#36063d"];
+
+// * Converting nodeList to an array
+
+const dotArr = [...dots];
 
 // ! Creating defaults
 
@@ -33,6 +33,7 @@ cartImgBg.style.fill = "#c36cbb";
 
 const changeItems = (accentColor) => {
   const color = accentColor;
+
   logoImg.forEach((circle) => (circle.style.fill = color));
   logoTxt.style.color = color;
   navLinks.forEach((navLink) => {
@@ -59,7 +60,3 @@ function selector(e) {
   const accentColor = colors[targetIndex];
   changeItems(accentColor);
 }
-
-// ! Creating event listener for the right arrow
-
-rightArrow.addEventListener("click", (e) => {});
