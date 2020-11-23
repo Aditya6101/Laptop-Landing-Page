@@ -19,7 +19,8 @@ const eclipseImages = document.querySelectorAll("stop");
 const colors = ["#c36cbb", "#0f5c5f", "#36063d"];
 
 // * Converting nodeList to an array
-const dotArr = [...dots];
+
+const dotArr = Array.from(dots);
 
 // ! Creating defaults
 
